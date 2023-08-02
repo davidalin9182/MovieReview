@@ -1,7 +1,8 @@
 .header-container{
+   
     width: 100%;
     height: 80px;
-    background-color: #fdc827;
+    background-color: #13232d;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,11 +14,13 @@
         letter-spacing: 4px;
         margin-left: 40xp;
         cursor: pointer;
+        color:white;
     }
     .logout {
         font-size: 18px;
         font-weight: bold;
         margin-right: 40px;
         cursor: pointer;
+        color:white;
     }
 }

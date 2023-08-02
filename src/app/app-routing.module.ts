@@ -9,7 +9,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full'},
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'movie', component: MovieComponent},
+  //have to add parameters to go to specific movie
+  { path: 'movie/:type/:id', component: MovieComponent},
   { path: '**', component: LoginComponent},
 ];
 
