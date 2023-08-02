@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="theatre-container">
+    <div class="movie-thumbnail">
+        <div class="movie" *ngFor="let movie of theatreMovies">
+            <div class="movie-cover" (click)="redirectToMovie('trending', movie.id)">
+                <img [src]="movie.cover">
+            </div>
+            <div class="movie-details">
+                <div class="movie-name" (click)="redirectToMovie('trending', movie.id)">
+                    {{movie.name}}
+                </div>
+                <div class="movie-rating">
+                    <span class="rating-value">{{movie.rating}}</span>
+                    <app-rating [rating]="movie.rating" [isReadOnly]="true"></app-rating>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

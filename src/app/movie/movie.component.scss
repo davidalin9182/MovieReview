@@ -1,6 +1,7 @@
 .movie-container{
     width: 1400px;
     margin: 0 auto;
+    min-height: 775px;  
     
     .top{
         display: flex;
@@ -100,5 +101,7 @@
             }
         }
     }
+
+    
 
 }

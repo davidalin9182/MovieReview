@@ -1,4 +1,4 @@
 <div class='header-container'>
     <div class="logo" (click)="redirectHome()">Movie Review</div>
-    <div class="logout" (click)="logout()">Logout</div>
+    <div class="logout" *ngIf="!isLoginPage() && !isRegisterPage()" (click)="logout()">Logout</div>
 </div>

@@ -11,6 +11,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FeaturesModule } from './features/features.module';
+import { FooterComponent } from './footer/footer.component';
+import { TrendingComponent } from './trending/trending.component';
+import { PopularComponent } from './popular/popular.component';
+import { TheatreComponent } from './theatre/theatre.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -20,6 +25,11 @@ import { FeaturesModule } from './features/features.module';
     HomeComponent,
     HeaderComponent,
     MovieComponent,
+    FooterComponent,
+    TrendingComponent,
+    PopularComponent,
+    TheatreComponent,
+    RegisterComponent,
     
   ],
   imports: [

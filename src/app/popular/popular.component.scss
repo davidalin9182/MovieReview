@@ -1,0 +1,33 @@
+.movie-thumbnail {
+    display: flex;
+    min-height: 755px;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+   
+    margin-bottom: 30px;
+    .movie {
+        margin-left: 20px;
+        .movie-cover {
+            img {
+                border-radius: 5px;
+                width: 180px;
+                height: 258px;
+
+            }
+        }
+
+        .movie-details {
+            width: 180px;
+
+            .movie-name {
+                font-weight: bold;
+                height: 50px;
+                margin-top: 5px;
+                cursor: pointer;
+            }
+        }
+
+    }
+}

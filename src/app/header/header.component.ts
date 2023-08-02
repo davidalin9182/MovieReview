@@ -13,7 +13,20 @@ export class HeaderComponent {
   redirectHome(){
     this.router.navigate(['home']);
   }
+  isLoginPage(): boolean {
+    
+    const currentRoute = this.router.url;
 
+    return currentRoute === '/login';
+  }
+
+  isRegisterPage(): boolean {
+    
+    const currentRoute = this.router.url;
+
+    return currentRoute === '/register';
+  }
+  
   logout() {
     this.authentication.logout();
     

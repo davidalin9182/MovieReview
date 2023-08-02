@@ -4,10 +4,10 @@
         <div class="trending-movies">
             <div class="top">
                 <h4>Trending Movies</h4>
-                <div class="view-all">View All</div>
+                <div class="view-all" (click)="redirectToTrending()">View All</div>
             </div>
             <div class="movie-thumbnail">
-                <div class="movie" *ngFor="let movie of trendingMovies">
+                <div class="movie" *ngFor="let movie of trendingMovies | slice:0:5 ">
                     <div class="movie-cover" (click)="redirectToMovie('trending', movie.id)">
                         <img [src]="movie.cover">
                     </div>
@@ -27,10 +27,10 @@
         <div class="theatre-movies">
             <div class="top">
                 <h4>Popualr in Theatres</h4>
-                <div class="view-all">View All</div>
+                <div class="view-all" (click)="redirectToTheatre()">View All</div>
             </div>
             <div class="movie-thumbnail">
-                <div class="movie" *ngFor="let movie of theatreMovies">
+                <div class="movie" *ngFor="let movie of theatreMovies | slice:0:5">
                     <div class="movie-cover"  (click)="redirectToMovie('theatre', movie.id)">
                         <img [src]="movie.cover">
                     </div>
@@ -55,20 +55,26 @@
               
             </div>
             <div class="movies">
-                <div class="movie" *ngFor="let movie of popularMovies">
+                <div class="movie" *ngFor="let movie of popularMovies | slice:0:5">
+                    <div class="mini-cover"  (click)="redirectToMovie('popular', movie.id)">
+                        <img [src]="movie.cover">
+                    </div>
+                    <div class="movie-details">
+                        <div class="movie-name" (click)="redirectToMovie('popular', movie.id)">
+                            {{movie.name}}
+                        </div>
+                        <div class="movie-rating">
+                            <span class="rating-value">{{movie.rating}}</span>
+                            <app-rating [rating]="movie.rating" [isReadOnly]="true"></app-rating>
+                        </div>
+                    </div>
                     
-                    <div class="movie-name" (click)="redirectToMovie('popular', movie.id)">
-                        {{movie.name}}
-                    </div>
-                    <div class="movie-rating">
-                        <span class="rating-value">{{movie.rating}}</span>
-                        <app-rating [rating]="movie.rating" [isReadOnly]="true"></app-rating>
-                    </div>
                     
     
                 </div>
-                <div class="view-all">View All</div>
+                <div class="view-all" (click)="redirectToPopular()">View All</div>
             </div>
         
     </div>
 </div>
+<app-footer></app-footer>

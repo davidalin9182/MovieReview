@@ -14,7 +14,9 @@ export class LoginComponent {
   constructor(private authentication: AuthenticationService,private router:Router){
     
   }
-
+  redirectToRegister(){
+    this.router.navigate(['/register']);
+  }
   login() {
     if (this.username.trim().length === 0) {
       this.errorMessage = 'Username is required';
